@@ -39,8 +39,23 @@
 
 ![1560408791889](./img/1560408791889.png)
 
-
-
 ### Requests
 
 ### Selenium
+
+### BeautifulSoup
+
+#### 解析库
+
+| 解析器          | 使用                                | 优势                                                      | 劣势                        |
+| --------------- | ----------------------------------- | --------------------------------------------------------- | --------------------------- |
+| Python标准库    | BeautifulSoup(markup,'html.parser') | Python内置标准库、执行速度适中、文档容错能力强            | python3.2以前版本中文容错差 |
+| lxml html解析器 | BeautifulSoup(markup,'lxml')        | 速度快、文档容错强                                        | 需要安装C语言库             |
+| lxml xml解析器  | BeautifulSoup(markup,'xml')         | 速度快、唯一支持xml的解析器                               | 需要安装C语言库             |
+| html5lib        | BeautifulSoup(markup,'html5lib')    | 最好的容错性、以浏览器的方式解析文档、生存html5格式的文档 | 速度慢、不依赖外部扩展      |
+
+> - 推荐使用lxml解析库，必要时使用html.parser
+> - 标签选择筛选功能弱，但速度快
+> - 建议使用find() 、find_all()查询匹配单个结果或多个结果
+> - 如果对CSS选择器熟悉建议使用select()
+> - 记者常用的获取属性与文本值的方法
