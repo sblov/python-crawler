@@ -17,9 +17,18 @@ def connectDB():
 
 def insertFaceJav(db, fj):
     DB_NAME = 't_facejav'
-    print(fj['title'], fj['img'], fj['page'], fj['des'])
+    print(fj['title'])
+
     cursor = db.cursor()
 
+    sql = 'select count(1) from t_facejav where title = "%s"'%(fj['title'])
+
+    cursor.execute(sql)
+    result = cursor.fetchone()
+    if result[0] != 0:
+        return
+
+    cursor = db.cursor()
     sql = 'insert into '+DB_NAME+' (title,IMGURL,PAGEURL,description,updateTime) values ("%s","%s","%s","%s",now())'%(fj['title'], fj['img'], fj['page'], fj['des'])
     try:
         cursor.execute(sql)
@@ -27,6 +36,8 @@ def insertFaceJav(db, fj):
     except:
         db.rollback()
     
-def initSave(fj):
+def initSave(fj_List):
     db = connectDB()
-    insertFaceJav(db, fj);
+    for fj in fj_List:
+        insertFaceJav(db, fj)
+

@@ -6,7 +6,6 @@ if __name__ == "__main__":
     # pageUrl = 'https://facejav.com'
     fj_list = catchWeb.init('https://facejav.com')
     
-    for fj in fj_list:
-        mysqlAction.initSave(fj)
+    mysqlAction.initSave(fj_list)
 
 
