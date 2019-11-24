@@ -58,4 +58,18 @@
 > - 标签选择筛选功能弱，但速度快
 > - 建议使用find() 、find_all()查询匹配单个结果或多个结果
 > - 如果对CSS选择器熟悉建议使用select()
-> - 记者常用的获取属性与文本值的方法
+> - 记者常用的获取属性与文本值的方法、
+
+
+
+## 国内镜像
+
+windows下： 新建`C:\Users\Administrator\pip\pip.ini`，填写下面内容，保存即可
+
+```shell
+[global]  
+index-url=http://mirrors.aliyun.com/pypi/simple/  
+[install]  
+trusted-host=mirrors.aliyun.com  
+```
+

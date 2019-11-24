@@ -1,6 +1,6 @@
 MYSQL_IP = '120.55.165.19'
 MYSQL_PORT = 3306
-MYSQL_SCHEME = 'djangoDemo'
+MYSQL_SCHEME = 'test'
 MYSQL_LOGIN = 'root'
 MYSQL_PASS = '997103zk'
 
