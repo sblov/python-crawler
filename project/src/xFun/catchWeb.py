@@ -1,14 +1,17 @@
 import requests
 from pyquery import PyQuery as pq
 
+# 获取相应页面
 def getPageView(pageUrl):
     
     response = requests.get(pageUrl)
+    # 判断返回http状态
     if response.status_code == 200 :
         return response.text
     else:
         return ''
 
+# 获取关键信息
 def getKeyContent(content):
     doc = pq(content)
     thumbList = doc('div.item-thumb').items()

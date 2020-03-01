@@ -1,6 +1,8 @@
 import pymysql as MySQLdb
 import Config
 import re
+import json
+import os
 
 config = {
     'host': Config.MYSQL_IP,
@@ -22,7 +24,7 @@ def insertFaceJav(db, fj):
 
     cursor = db.cursor()
 
-    sql = 'select count(1) from t_img_resource where img_src = "%s"'%(fj['img_src'])
+    sql = 'select count(1) from '+DB_NAME+' where img_src = "%s"'%(fj['img_src'])
 
     cursor.execute(sql)
     result = cursor.fetchone()
@@ -48,6 +50,13 @@ def get_img_src(path):
             img_list.append(wall_src)
             # print(wall_src)
     return img_list
+
+def get_json_data(path):
+    # ./src/xFun/data.txt
+      # 读取数据，并转换为json格式
+    for line in open(path,  encoding='UTF-8'):
+        data=json.loads(line+"}")
+        insertDetail(db, data)
 
 
 def initSave(fj_List):

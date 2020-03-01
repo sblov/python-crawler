@@ -1,3 +1,17 @@
+# Python基本爬虫lib
+
+## main目录
+
+​	基本爬虫lib的使用
+
+## demo目录
+
+​	相关案例demo
+
+## sqlalchemy & xFun
+
+​	mysql及orm相关操作
+
 ## 配置镜像
 
 windows下： 新建`C:\Users\Administrator\pip\pip.ini`，填写下面内容，保存即可
@@ -26,3 +40,4 @@ File—Preferences—Settings，搜索python.formatting.provider，选择yapf
 `pip install pyquery `
 
 `pip install HTMLParser`
+

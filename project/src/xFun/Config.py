@@ -1,6 +1,6 @@
-MYSQL_IP = '120.55.165.19'
+MYSQL_IP = 'localhost'
 MYSQL_PORT = 3306
-MYSQL_SCHEME = 'test'
+MYSQL_SCHEME = 'x_lov'
 MYSQL_LOGIN = 'root'
-MYSQL_PASS = '997103zk'
+MYSQL_PASS = 'root'
 
